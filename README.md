@@ -1,4 +1,6 @@
-# miniproject1JR
+## miniproject1JR
+### Jacob Richmond
+### INF601 Advanced Python 
 
 ## Description
 This project will be using the packages NumPy and Matplotlib in order to create 5 graphs that output as PNG files.
