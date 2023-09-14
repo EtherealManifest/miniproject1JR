@@ -1,6 +1,7 @@
 # INF 601 Advanced Python
 # Jacob Richmond
 # Mini Project 1
+from pathlib import Path
 import yfinance as yf
 import numpy as np
 import matplotlib.pyplot as plt
@@ -22,10 +23,9 @@ stocks = ["MSFT", "AAPL", "GME", "META", "NTDOY"]
 
 
 
-#loop through all the Tickers and pull their data
-#get all stack info
 
-#This method goes through and returns a list of all ofthe tickers closing prices for the
+
+#This function goes through and returns a list of all ofthe tickers closing prices for the
 #last ten days and returns them in a list
 def get_closing(Tick):
     stock = yf.Ticker(Tick)
@@ -40,6 +40,11 @@ def get_closing(Tick):
     return closingList
 
 
+#create our directory for the files to be saved in, only if it does not already exist.
+try:
+    Path("Charts").mkdir()
+except FileExistsError:
+    pass
 #create empty list for the closing prices of all stocks
 
 msft_closing = np.array(get_closing("MSFT"))
