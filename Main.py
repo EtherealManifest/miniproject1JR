@@ -59,7 +59,7 @@ for stock in stocks:
     low_price = prices[0]
     high_price = prices[-1]
 
-    plt.title("The Closing Prices for" + stock)
+    plt.title("The Closing Prices for " + stock)
     plt.xlabel("Days")
     plt.ylabel("Closing Price")
     plt.axis([10,1, low_price-2, high_price + 2])
