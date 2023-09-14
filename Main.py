@@ -18,7 +18,7 @@ import pprint
 
 # Apple = APPL
 # Microsoft = MSFT
-stocks = ["MSFT", "APPL", "GME", "META", "NTDOY"]
+stocks = ["MSFT", "AAPL", "GME", "META", "NTDOY"]
 
 
 
@@ -63,11 +63,14 @@ for stock in stocks:
     plt.xlabel("Days")
     plt.ylabel("Closing Price")
     plt.axis([10,1, low_price-2, high_price + 2])
-    #show the graph
+    #plot the data
     plt.plot(days, stockClosing)
 
-plt.show()
-
+    #saves the plot
+    savefile = "Charts/" + stock + ".png"
+    plt.savefig(savefile)
+    #ACTUALLY show it
+    plt.show()
 
 
 #(10/10 points) Store this information in a list that you will convert to a ndarray in NumPy.
